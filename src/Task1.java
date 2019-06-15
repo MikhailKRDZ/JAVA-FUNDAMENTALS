@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Task1 {
 //    Optional Task1
@@ -14,7 +15,7 @@ public static void main(String[] args) {
     //    2.     Отобразить в окне консоли аргументы командной строки в обратном порядке.
     revers();
     //            3.     Вывести заданное количество случайных чисел с переходом и без перехода на новую строку
-    someRandomNumbers();
+//    someRandomNumbers();
     //            4.     Ввести целые числа как аргументы командной строки, подсчитать их сумму (произведение) и вывести результат на консоль.
     mathOperations();
 }
