@@ -22,16 +22,16 @@ public static void main(String[] args) {
     private static void hello() {
         System.out.println(" Hello! Please enter your name:");
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.next();
+        String name = scanner.nextLine();
         System.out.println("Hello! " + name);
     }
 
 
     private static void revers() {
         String reversLine = "";
-        System.out.print("Введите аргументы (без пробелов): ");
+        System.out.print("Введите аргументы : ");
         Scanner scanner = new Scanner(System.in);
-        String line = scanner.next();
+        String line = scanner.nextLine();
         int positionNumber = line.length()-1;
         while (positionNumber >= 0) {
             reversLine = reversLine + line.charAt(positionNumber);
