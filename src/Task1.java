@@ -1,14 +1,16 @@
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 import static java.lang.Math.random;
 
 public class Task1 {
-//    Для успешного обучения из каждого набора заданий достаточно выполнить 1-2.
+//    Optional Task1
 //            1.     Приветствовать любого пользователя при вводе его имени через командную строку.
 //            2.     Отобразить в окне консоли аргументы командной строки в обратном порядке.
 //            3.     Вывести заданное количество случайных чисел с переходом и без перехода на новую строку
+//            4.     Ввести целые числа как аргументы командной строки, подсчитать их сумму (произведение) и вывести результат на консоль.
 
 
 public static void main(String[] args) {
@@ -17,9 +19,9 @@ public static void main(String[] args) {
     //    2.     Отобразить в окне консоли аргументы командной строки в обратном порядке.
 //    revers();
     //            3.     Вывести заданное количество случайных чисел с переходом и без перехода на новую строку
-    someRandomNumbers();
+//    someRandomNumbers();
     //            4.     Ввести целые числа как аргументы командной строки, подсчитать их сумму (произведение) и вывести результат на консоль.
-
+    mathOperations();
 }
 
     private static void hello() {
@@ -58,5 +60,24 @@ public static void main(String[] args) {
         for (int i = 0; i <randomSize; i++) {
             System.out.print(randomNumber[i] + " ");
         }
+    }
+
+    private static void mathOperations() {
+        System.out.print("Введите целые числа через пробел : ");
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        String[] splitLine = line.split("\\s+");
+        System.out.println("Вы ввели :");
+        int[] arg = new int[splitLine.length];
+        int summ = 0;
+        int multiplication = 1;
+        for (int i = 0; i < splitLine.length; i++) {
+            arg[i] = Integer.parseInt(splitLine[i]);
+            System.out.println( arg[i]);
+            summ += arg[i];
+            multiplication = multiplication * arg[i];
+        }
+        System.out.println("Сумма :" + summ);
+        System.out.println("Произведение :" + multiplication);
     }
 }
